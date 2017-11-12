@@ -1,102 +1,392 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <script src="js/ga.js"></script>
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-38205696-1']);
-            _gaq.push(['_trackPageview']);
-            
-        </script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about me</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">    
+    <style>
+    body,html{
+        margin: 0;
+        padding: 0;
+        height:100%;
+        width:100%;
+        font-family: Lato,"Microsoft YaHei",sans-serif;
+        font-weight: 400;
+    }
+    body{
+        width: 2478px;
+        height:3508px;
+        background-color: #F1EEE8;   
+    }
+    h1,h2,h3,h4,p{
+        margin: 0;
+        padding: 0;
+    }
+    #about{
+        display:flex;
+        width:100%;
+        height:100%;
+    }
+    #about-l{
+        display: flex;
+        align-items: flex-start;
+        width: 594px;
+        height:100%;
+        background-color:#5DC3B1;
+        padding:0 154px 0 154px;        
+    }
+    #about-l .about-t{
         
-        <meta name="viewport" content="width=100%, initial-scale=1" />
-        <title>刘子军的简历</title>
-        <link rel="shortcut icon" href="../blog/img/owl.ico" />
+    }
+    #about-l .about-t .cover{
+        margin:0 auto;        
+        margin-top:152px;
+        border-radius:50%;
+        height: 446px;
+        width:446px;
+        overflow: hidden;
+        text-align: center;
+    }
+    #about-l .about-t .cover img{
+        text-align: center;        
+        width: 100%;
+        height:100%;
+        vertical-align: top;
+    }
+    #about-l .about-t .name{
+        font-size:90px;
+        text-align: center;
+        color:#F1EEE8;
+        font-weight:700;
+        padding:50px 0 37px 0;
+        text-shadow: 1px 2px #5DC3B1,2px 2px #F1EEE8;
+    }
+    #about-l .about-t .other{
+        padding:0 0 40px 0;
+        text-align: center;    
+        width: 100%;
+        border-bottom:4px solid #1D7D71;
+    }
+    #about-l .about-t .other .gender,#about-l .about-t .other .age{
+        font-size:41px;
+        line-height: 45px;
+        color:#1D7D86;   
+        display: inline-block;
+        padding:0 20px;
+    }
+    #about-l .about-t .other .gender::after{
+        content:'';
+        border-right:2px solid #F1EEE8;
+        padding-left:40px;
+    }
+    #about-l .about-t .desc{
+        padding:0 0 20px 0;
+        border-bottom:1px solid #258679;
+        color:#126A5F;  
+        text-align: center;     
+    }
+    #about-l .about-t .desc p{
+        line-height: 50px;
+        font-size:31px;
+    }
+    #about-l .about-t .desc h3{
+        font-weight: 700;
+        font-size:42px;
+    }
+    #about-l .about-t .technology{
+        margin-top:53px;
+        margin-bottom:155px;
+        display: flex;
+        flex-direction: column;        
+    }   
+    #about-l .about-t .technology .container{
+        display: flex;
+        justify-content: center; 
+        margin-top:52px;   
+        align-items: center;                  
+    }
+    #about-l .about-t .technology .technology-l{
+        color:#F1EEE8;
+        font-weight: 700;
+        font-size:24px;
+        width: 150px;
+        text-align:right;
+        margin-right:10px;
+    }
+    #about-l .about-t .technology .technology-r{
+        margin-left:10px;
+        width: 375px;
+        height: 38px;
+        background-color:#3EB79F;
+        text-align: left;
+        border-radius:30px;
+        overflow:hidden;
+    }
+    #about-l .about-t .technology .technology-r .box{
+        background: #F1EEE8;
+        width:100%;
+        height:100%;
+    }
+    #about-l .about-t .personal-note{
+        margin-top: 10px;
+        line-height: 75px;
+        font-size:42px;
+        color:#F1EEE8;  
+    }
+    #about-l .about-b{
+        align-self:flex-end;
+        margin-bottom:150px;
+        margin-left:-545px;
+    }
+    #about-l .about-b .link{
+        margin:0 auto;        
+        margin-top:20px;
+        margin-left:-50px;
+        display: flex;   
+        justify-content: left;     
+        align-items: flex-start;
+    }
+    #about-l .about-b .link .icon{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius:50%;
+        background-color:#F1EEE8;
+        margin-right:20px;
+        text-align: center;        
+    }
+    #about-l .about-b .link .icon i{
+        color:#38BCA6;
+        font-size:48px;
+        line-height: 70px;
+    }
+    #about-l .about-b .link .address{
+        font-size:39px;
+        font-weight: 700;
+        color:#F1EEE8;
+        text-decoration: underline;
+    }
+    #about-r{
+        width:1336px;
+        height:3348px;
+        padding:160px 150px 0 90px;
+    }
+    #about-r .project{
+        margin-bottom:300px;
+    }
+    #about-r .project h2{
+        font-size:78px;
+        color:#6C6B6B;
+        margin-bottom:16px;
+    }
+    #about-r .project .line{
+        border:5px solid;
+        border-color: #5DC3B1 transparent transparent transparent;
+        position: relative
+    }
+    #about-r .project .line::before{
+        position: absolute;
+        content:'';
+        width: 5px;
+        height: 5px;
+        background:#5DC3B1;
+        left: -5px;
+        top: -5px;
+    }
+    #about-r .project .pro{
+        margin-top:60px;
+    }
+    #about-r .project .pro .head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:30px;
+        align-items: center;
+    }
+    #about-r .project .pro .head .title{
+        color:#5DC3B1;
+        font-size:56px;
+        font-weight:700;
+        text-decoration: underline;
+    }
+    #about-r .project .pro .head .hold{
+        text-decoration: none;
+    }
+    #about-r .project .pro .head .tagx{
+        position: relative;
+    }
+    #about-r .project .pro .head .tagx::before{
+        content:'';
+        position: absolute;
+        width:99%;
+        height: 10px;
+        top:50%;
+        left: 0;
+        transform:translateY(-50%);
+        background:#1D7D71;
+        z-index: -1;
+    }
+    #about-r .project .pro .head .tagx .tag-name{
+        background:#5DC3B1;
+        color:#F1EEE8;
+        font-size:32px;
+        font-weight: 700;
+        padding:15px 22px;
+        margin-right:15px;
+    }
+    #about-r .project .pro .head .tagx .tag-name:last-child{
+        margin-right:0;
+    }
+    #about-r .project .pro .content{
         
-        <link rel="stylesheet" href="vendor/jquery.pagepiling.css" type="text/css" />
-        
-        <link rel="stylesheet" href="css/main.css" type="text/css" />
-    </head>
+    }
+    #about-r .project .pro .content p{
+        font-size:38px;
+        color:#787878;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+    #about-r .project .pro .content .time{
+        color:#1D7D71;
+        font-size:35px;
+        margin-bottom:15px;
+    }
+    </style>
+</head>
+<body>
+    <div id="about">
+    <div id="about-l">
+        <div class="about-t">
+        <div class="cover">
+            <img src="img/avatar.jpg" alt="">
+        </div>
+        <div class="name">刘子军</div>
+        <div class="desc">
+            <p>一腔热血的激情</p>
+            <p>一夜失眠的创意</p>
+            <p>一个像素的执着</p>
+            <h3>网站前端工程师</h3>
+        </div>
+        <div class="technology">
+            <div class="container">
+                <div class="technology-l">HTML</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">CSS</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">CSS3</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">JAVASCRIPT</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">JQUERY</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">SCSS</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">LESS</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">BOOTSTRAP</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+            <div class="container">
+                <div class="technology-l">VUE</div>
+                <div class="technology-r"><div class="box"></div></div>  
+            </div>
+        </div>
+        <div class="personal-note">我是一个充满热情、创意丰富、善于解决问题的前端工程师。希望找到能让我充分发挥这些特长的工作！:-)</div>
+    </div>
+    <div class="about-b">
+            <div class="link">       
+                    <div class="icon"><i class="fa  fa-mobile" style="font-size:70px;"></i></div>
+                    <div class="address">13172922848</div>
+                </div>
+       <div class="link">
+            <div class="icon"><i class="fa fa-qq"></i></div>
+            <div class="address">770952023</div>
+        </div>
+        <div class="link">
+            <div class="icon"><i class="fa  fa-envelope"></i></div>
+            <div class="address">ayano@loli.com.co</div>
+        </div>
+        <div class="link">
+                <div class="icon"><i class="fa fa-github-alt"></i></div>
+                <div class="address">github.com/lzj724</div>
+            </div>
+    </div>
+    </div>
+    <div id="about-r">
+        <div class="project">
+            <h2>作品展示</h2>
+            <div class="pro">
+                <div class="head">
+                    <div class="title">网易音乐播放器</div>
+                    <div class="tagx">
+                        <span class="tag-name">VUE</span>
+                        <span class="tag-name">VUEX</span>
+                        <span class="tag-name">SCSS</span>
+                        <span class="tag-name">JAVASCRIPT</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>以网页实现网易云手机音乐播放器的大部分功能。具体以调用网易接口实现在线听音乐。以VUE全家桶为基础构建制作而成，虽然已实现大部分功能，但有部分功能无法调用到接口无法实现，不过不影响在线听音乐效果。</p>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+                <h2>工作经历</h2>
+                <div class="pro">
+                    <div class="head">
+                        <div class="title hold">石首市皇冠大酒店</div>
+                    </div>
+                    <div class="content">
+                         <div class="time">2015年10月至2017年3月</div>                            
+                        <p>平面设计师</p>
+<p>任职期间，主要负责酒店的产品及画册，海报，单页等的设计。努力配合营销部把产品以最优的方式展现给客人。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                    <h2>教育背景</h2>
+                    <div class="pro">
+                        <div class="head">
+                            <div class="title hold">荆州理工职业技术学院</div>
+                        </div>
+                        <div class="content">
+                            <div class="time">2012年9月至2015年7月</div>
+                            <p>专业：平面设计</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <h2>个人说明</h2>
+                    <div class="pro">
+                        <div class="line" style="margin-bottom:20px;"></div>
+                        <div class="content">
+                            <p style="color:#1D7D71;font-weight:500;">本人熟悉Javascript、HTML、CSS的基本使用</p>
+                            <p style="color:#1D7D71;font-weight:500;">熟悉 jquery/vue 前端框架</p>
+                            <p style="color:#1D7D71;font-weight:500;">熟悉bootstrap响应式布局</p>
+                            <p style="color:#1D7D71;font-weight:500;">了解前端自动化，熟悉webpack 工具常见用法</p>
+                            <p style="color:#1D7D71;font-weight:500;">掌握源码管理工具Git</p>
+                            <p style="color:#1D7D71;font-weight:500;">拥有vue的独立开发经验</p>
+                            <p style="color:#1D7D71; font-weight:500;">学习能力强，善于思考总结，工作认真、责任心强，有较强的沟通和协作开发能力</p>
+                        </div>
+                    </div>
+                </div>
+    </div>
     
-    <body>
-        <div id="pagepiling">
-            <div class="section center" id="home">
-                <img id="avatar" src="img/avatar.jpg" />
-                <h1 id="title">刘子军</h1>
-                <p id="subtitle">一腔热血的激情 · 一夜失眠的创意 · 一个像素的执着</p>
-                <h4>前端工程师</h4>
-
-                <p><a href="mailto:ayano@loli.com.co">ayano@loli.com.co</a></p>
-            </div>
-            
-            <div class="section" id="project">
-                <h1>项目经验</h1>
-                <div class="row">                               
-                    <div class="col-5" style="text-align:right;margin-right:50px;">
-                        <a class="circle-img" href="https://github.com/lzj724/wyMusic">
-                            <img src="img/zhujianer.png" alt="wymusic" />
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <h2><a href="https://github.com/lzj724/wyMusic">网易云音乐播放器</a></h2>
-                        <p>实现网易云手机播放器的基本功能</p>
-                    </div>
-                    <div class="clearboth"></div>
-                </div>
-            </div>
-            
-            <div class="section center" id="profession">
-                <h1>擅长技术</h1>
-                <div class="tag-panel">
-                    <div class="tag expert">CSS</div>
-                    <div class="tag expert">CSS3</div>
-                    <div class="tag familiar">SCSS</div>
-                </div>
-                <div class="tag-panel">
-                    <div class="tag expert">JavaScript</div>
-                    <div class="tag familiar">jQuery</div>
-                    <div class="tag expert">Bootstrap</div>
-                    <div class="tag familiar">Vue</div>
-                </div>
-                <div class="tag-panel">
-                    <div class="tag familiar">HTML5</div>
-                    <div class="tag familiar">Web Audio</div>
-                </div>
-                <div class="tag-panel">
-                    <div class="tag expert">网页设计</div>
-                    <div class="tag familiar">平面设计</div>
-                    <div class="tag familiar">音视频编辑</div>
-                </div>
-                <div class="tag-panel">
-                    <div class="tag expert">PhotoShop</div>
-                </div>
-            </div>
-            
-            <div class="section center">
-                <h1>教育背景</h1>
-                <h4>荆州理工职业技术学院</h4>
-                <p>学院专业：平面设计</p>
-                <p>2015年7月毕业</p>
-            </div>
-            
-            <div class="section center">
-                <h1>工作经历</h1>
-                <h4>石首市皇冠大酒店</h4>
-                <p>2015年10月至2017年3月</p>
-                <p>任职期间，主要负责酒店的公众号运营推广，活动海报宣传，以及活动时期举办的庆典等活动。</p>
-            </div>
-            
-            <div class="section center">
-                <h1>了解更多</h1>
-                <h2><a href="http://loliKon.cn/" target="_blank">个人主页</a>
-                <p>Email: <a href="mailto:ayano@loli.com.co" target="_blank">ayano@loli.com.co</a></p>
-            </div>
-        <link rel="stylesheet" href="../blog/css/font.css" type="text/css" />
-        
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>');</script>
-        <script type="text/javascript" src="vendor/jquery.pagepiling.min.js"></script>        
-        <script type="text/javascript" src="js/index.min.js"></script>
-    </body>
+</div>
+</body>
 </html>
